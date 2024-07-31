@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ProductAPIValidation" data-provider-thread-count="20" >
+    <test name="Создание продукта">
+        <parameter name="baseUrl" value="http://shop.qatl.ru"/>
+        <parameter name="id" value="32788"/>
+        <parameter name="categoryId" value="14"/>
+        <parameter name="title" value="Album SKZ Ate"/>
+        <parameter name="alias" value="album-skz-ate"/>
+        <parameter name="content" value="MiniAlbum with CD and photo cards"/>
+        <parameter name="price" value="3200"/>
+        <parameter name="oldPrice" value="3000"/>
+        <parameter name="status" value="1"/>
+        <parameter name="keywords" value="Ate"/>
+        <parameter name="description" value="MiniAlbum with CD and photo cards: Mountains, Chk Chk Boom, Runners, JJam, Twilight, I like it, Stray Kids, Chk Chk Boom (festival ver.)"/>
+        <parameter name="hit" value="1"/>
+        <parameter name="invalidPrice" value="InvPrice"/>
+        <parameter name="invalidOldPrice" value="InvOldPrice"/>
+        <parameter name="invalidCategoryId" value="16"/>
+        <parameter name="invalidStatus" value="3"/>
+        <parameter name="invalidHit" value="3"/>
+        <parameter name="boundaryCategoryId" value="15"/>
+        <parameter name="invalidTitle" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3"/>
+        <classes>
+            <class name="ru.shop.api.createProductTest"/>
+        </classes>
+    </test>
+
+    <test name="Удаление продукта">
+        <parameter name="baseUrl" value="http://shop.qatl.ru"/>
+        <parameter name="id" value="32788"/>
+        <parameter name="categoryId" value="4"/>
+        <parameter name="title" value="Album SKZ Oddinary"/>
+        <parameter name="alias" value="album-skz-oddinary"/>
+        <parameter name="content" value="MiniAlbum Oddinary with CD and photo cards"/>
+        <parameter name="price" value="2500"/>
+        <parameter name="oldPrice" value="2000"/>
+        <parameter name="status" value="1"/>
+        <parameter name="keywords" value="Oddinary"/>
+        <parameter name="description" value="MiniAlbum Oddinary with CD and photo cards: Maniac, Venom"/>
+        <parameter name="hit" value="1"/>
+        <parameter name="unexistedId" value="32788"/>
+        <parameter name="invalidId" value="testId"/>
+        <classes>
+            <class name="ru.shop.api.deleteProduct"/>
+        </classes>
+    </test>
+
+    <test name="Изменение продукта">
+        <parameter name="baseUrl" value="http://shop.qatl.ru"/>
+        <parameter name="id" value="32788"/>
+        <parameter name="categoryId" value="6"/>
+        <parameter name="title" value="Album SKZ Noise"/>
+        <parameter name="alias" value="album-skz-noise"/>
+        <parameter name="content" value="MiniAlbum Noise with CD and photo cards"/>
+        <parameter name="price" value="2500"/>
+        <parameter name="oldPrice" value="2000"/>
+        <parameter name="status" value="1"/>
+        <parameter name="keywords" value="Noise"/>
+        <parameter name="description" value="MiniAlbum Noise with CD and photo cards: Easy, Suricun, Cheese, Domino"/>
+        <parameter name="hit" value="1"/>
+        <parameter name="newTitle" value="Album SKZ Noise modified"/>
+        <parameter name="newPrice" value="5000"/>
+        <classes>
+            <class name="ru.shop.api.modifyProduct"/>
+        </classes>
+    </test>
+
+</suite>
