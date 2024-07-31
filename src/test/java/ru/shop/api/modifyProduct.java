@@ -9,7 +9,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import ru.shop.api.helpers.HttpRequestProduct;
 import ru.shop.api.helpers.Product;
+
 import java.io.IOException;
+
 import static org.testng.AssertJUnit.assertEquals;
 
 public class modifyProduct {
@@ -42,7 +44,7 @@ public class modifyProduct {
             """)
 
     public void modifyProduct(String baseUrl, String categoryId, String title, String alias, String content, String price, String oldPrice,
-                                  String status, String keywords, String description, String hit) throws IOException {
+                              String status, String keywords, String description, String hit) throws IOException {
         System.out.println("Изменение продукта - sent request for modifying product");
         Product productInfo = new Product(addedId, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
                 hit);

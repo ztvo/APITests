@@ -16,6 +16,7 @@ public class HttpRequestProduct {
     final String URL_GET_PRODUCT = "/api/products";
 
     public HttpResponse<String> requestResponse;
+
     public enum PostRequestType {
         EDIT,
         ADD;
@@ -40,15 +41,13 @@ public class HttpRequestProduct {
             var objectMapper = new ObjectMapper();
             String requestBody = objectMapper.writeValueAsString(values);
             HttpClient client = HttpClient.newHttpClient();
-            String urlType = type == PostRequestType.ADD? URL_ADD_PRODUCT :  URL_EDIT_PRODUCT;
+            String urlType = type == PostRequestType.ADD ? URL_ADD_PRODUCT : URL_EDIT_PRODUCT;
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(URL + urlType))
                     .POST(HttpRequest.BodyPublishers.ofString(requestBody))
                     .build();
-            this.requestResponse  = client.send(request,
+            this.requestResponse = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
-            System.out.println(this.requestResponse.body());
-            System.out.println(this.requestResponse.statusCode());
         } catch (Exception e) {
             System.out.print("Sent post request failed: " + e);
         }
@@ -61,10 +60,8 @@ public class HttpRequestProduct {
                     .uri(URI.create(URL + URL_GET_PRODUCT))
                     .GET()
                     .build();
-            this.requestResponse  = client.send(request,
+            this.requestResponse = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
-            System.out.println(this.requestResponse.body());
-//            System.out.println(this.requestResponse.statusCode());
         } catch (Exception e) {
             System.out.print("Sent get request failed: " + e);
         }
@@ -77,10 +74,8 @@ public class HttpRequestProduct {
                     .uri(URI.create(URL + URL_DELETE_PRODUCT + id))
                     .DELETE()
                     .build();
-            this.requestResponse  = client.send(request,
+            this.requestResponse = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
-            System.out.println(this.requestResponse.body());
-            System.out.println(this.requestResponse.statusCode());
         } catch (Exception e) {
             System.out.print("Sent delete request failed: " + e);
         }

@@ -82,8 +82,8 @@ public class createProductTest {
             """)
 
     public void createProductWithInvalidOldPrice(String baseUrl, String id, String categoryId, String title,
-                                              String alias, String content, String price, String oldPrice,
-                                              String status, String keywords, String description, String hit)
+                                                 String alias, String content, String price, String oldPrice,
+                                                 String status, String keywords, String description, String hit)
             throws IOException, JsonParseException {
         System.out.println("Создание продукта c невалидной oldPrice - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
@@ -101,8 +101,8 @@ public class createProductTest {
                    Добавление продукта c невалидной CategoryId
             """)
     public void createProductWithInvalidCategoryId(String baseUrl, String id, String categoryId, String title,
-                                                 String alias, String content, String price, String oldPrice,
-                                                 String status, String keywords, String description, String hit)
+                                                   String alias, String content, String price, String oldPrice,
+                                                   String status, String keywords, String description, String hit)
             throws IOException, JsonParseException {
         System.out.println("Создание продукта c невалидной CategoryId - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
@@ -136,8 +136,8 @@ public class createProductTest {
                    Добавление продукта c граничными значениями для CategoryId
             """)
     public void createProductBoundayCategoryId(String baseUrl, String id, String categoryId, String title,
-                                                   String alias, String content, String price, String oldPrice,
-                                                   String status, String keywords, String description, String hit)
+                                               String alias, String content, String price, String oldPrice,
+                                               String status, String keywords, String description, String hit)
             throws IOException, JsonParseException {
         System.out.println("Создание продукта c граничными значениями для CategoryId - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
@@ -173,8 +173,8 @@ public class createProductTest {
                    Добавление продукта c невалидным title
             """)
     public void createProductInvalidTitle(String baseUrl, String id, String categoryId, String title,
-                                               String alias, String content, String price, String oldPrice,
-                                               String status, String keywords, String description, String hit)
+                                          String alias, String content, String price, String oldPrice,
+                                          String status, String keywords, String description, String hit)
             throws IOException, JsonParseException {
         System.out.println("Создание продукта c невалидным title - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
@@ -193,8 +193,8 @@ public class createProductTest {
                    Проверка: продукт добавился с status = 1   
             """)
     public void createProductWithInvalidStatus(String baseUrl, String id, String categoryId, String title,
-                                                   String alias, String content, String price, String oldPrice,
-                                                   String status, String keywords, String description, String hit, String invalidStatus)
+                                               String alias, String content, String price, String oldPrice,
+                                               String status, String keywords, String description, String hit, String invalidStatus)
             throws IOException, JsonParseException {
         System.out.println("Создание продукта c невалидным Status - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, oldPrice, invalidStatus, keywords, description,
@@ -231,8 +231,8 @@ public class createProductTest {
                    Проверка: продукт добавился со значением hit = 1
             """)
     public void createProductWithInvalidHit(String baseUrl, String id, String categoryId, String title,
-                                               String alias, String content, String price, String oldPrice,
-                                               String status, String keywords, String description, String hit, String invalidHit)
+                                            String alias, String content, String price, String oldPrice,
+                                            String status, String keywords, String description, String hit, String invalidHit)
             throws IOException, JsonParseException {
         System.out.println("Создание продукта c невалидным hit - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
@@ -269,7 +269,7 @@ public class createProductTest {
             """)
 
     public void createProductWithEmptyCategoryId(String baseUrl, String id, String title, String alias, String content, String price, String oldPrice,
-                                             String status, String keywords, String description, String hit) throws IOException, JsonParseException {
+                                                 String status, String keywords, String description, String hit) throws IOException, JsonParseException {
         System.out.println("Создание продукта c пустой categoryId - sent request for create product");
         Product productInfo = new Product(id, "", title, alias, content, price, oldPrice, status, keywords, description,
                 hit);
@@ -287,7 +287,7 @@ public class createProductTest {
             """)
 
     public void createProductWithEmptyId(String baseUrl, String categoryId, String title, String alias, String content, String price, String oldPrice,
-                                                 String status, String keywords, String description, String hit) throws IOException, JsonParseException {
+                                         String status, String keywords, String description, String hit) throws IOException, JsonParseException {
         System.out.println("Создание продукта c пустым Id - sent request for create product");
         Product productInfo = new Product(null, categoryId, title, alias, content, price, oldPrice, status, keywords, description,
                 hit);
@@ -323,7 +323,7 @@ public class createProductTest {
             """)
 
     public void createProductWithEmptyTextFields(String baseUrl, String categoryId, String price, String oldPrice,
-                                         String status, String hit) throws IOException, JsonParseException {
+                                                 String status, String hit) throws IOException, JsonParseException {
         System.out.println("Создание продукта c пустым текстовыми полями - sent request for create product");
         Product productInfo = new Product(null, categoryId, "", null, null, price, oldPrice, status, null, null,
                 hit);
@@ -359,7 +359,7 @@ public class createProductTest {
             """)
 
     public void createProductWithEmptyPrice(String baseUrl, String id, String categoryId, String title, String alias, String content, String oldPrice,
-                                                 String status, String keywords, String description, String hit) throws IOException, JsonParseException {
+                                            String status, String keywords, String description, String hit) throws IOException, JsonParseException {
         System.out.println("Создание продукта c пустой price - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, "", oldPrice, status, keywords, description,
                 hit);
@@ -377,7 +377,7 @@ public class createProductTest {
             """)
 
     public void createProductWithNullTitle(String baseUrl, String id, String categoryId, String alias, String content, String price, String oldPrice,
-                                            String status, String keywords, String description, String hit) throws IOException, JsonParseException {
+                                           String status, String keywords, String description, String hit) throws IOException, JsonParseException {
         System.out.println("Создание продукта c null title - sent request for create product");
         Product productInfo = new Product(id, categoryId, null, alias, content, price, oldPrice, status, keywords, description,
                 hit);
@@ -395,7 +395,7 @@ public class createProductTest {
             """)
 
     public void createProductWithEmptyOldPrice(String baseUrl, String id, String categoryId, String title, String alias, String content, String price,
-                                            String status, String keywords, String description, String hit) throws IOException, JsonParseException {
+                                               String status, String keywords, String description, String hit) throws IOException, JsonParseException {
         System.out.println("Создание продукта c пустой old price - sent request for create product");
         Product productInfo = new Product(id, categoryId, title, alias, content, price, "", status, keywords, description,
                 hit);
