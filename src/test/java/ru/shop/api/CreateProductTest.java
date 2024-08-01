@@ -16,7 +16,7 @@ import java.io.IOException;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class createProductTest {
+public class CreateProductTest {
     String addedId;
 
     @Parameters({"baseUrl", "id", "categoryId", "title", "alias", "content", "price", "oldPrice", "status", "keywords", "description", "hit"})

@@ -11,7 +11,7 @@ import ru.shop.api.helpers.Product;
 
 import java.io.IOException;
 
-public class deleteProduct {
+public class DeleteProduct {
 
     String addedId;
 

@@ -22,7 +22,7 @@
         <parameter name="boundaryCategoryId" value="15"/>
         <parameter name="invalidTitle" value="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa3"/>
         <classes>
-            <class name="ru.shop.api.createProductTest"/>
+            <class name="ru.shop.api.CreateProductTest"/>
         </classes>
     </test>
 
@@ -42,7 +42,7 @@
         <parameter name="unexistedId" value="32788"/>
         <parameter name="invalidId" value="testId"/>
         <classes>
-            <class name="ru.shop.api.deleteProduct"/>
+            <class name="ru.shop.api.DeleteProduct"/>
         </classes>
     </test>
 
@@ -62,7 +62,7 @@
         <parameter name="newTitle" value="Album SKZ Noise modified"/>
         <parameter name="newPrice" value="5000"/>
         <classes>
-            <class name="ru.shop.api.modifyProduct"/>
+            <class name="ru.shop.api.ModifyProduct"/>
         </classes>
     </test>
 

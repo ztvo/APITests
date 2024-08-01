@@ -14,7 +14,7 @@ import java.io.IOException;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class modifyProduct {
+public class ModifyProduct {
     String addedId;
 
     @BeforeMethod
@@ -63,7 +63,7 @@ public class modifyProduct {
         Product returnedProduct = productInfo.findProductById(productArray);
 
         // проверка полей
-        createProductTest.checkProduct(productInfo, returnedProduct);
+        CreateProductTest.checkProduct(productInfo, returnedProduct);
     }
 
     @AfterMethod(description = "Удаление продукта", alwaysRun = true)
